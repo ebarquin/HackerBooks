@@ -17,7 +17,7 @@ class Book {
     //MARK: - Stored properties
     let title       :   String
     let authors     :   Author
-    let tags        :   String
+    let tags        :   Tag
     let image_url   :   URL
     let pdf_url     :   URL
     
@@ -27,7 +27,7 @@ class Book {
     //MARK: - Inicialization
     init(title:String,
          authors: Author,
-         tags: String,
+         tags: Tag,
          image_url: URL,
          pdf_url: URL){
         
