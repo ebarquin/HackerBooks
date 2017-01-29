@@ -9,35 +9,38 @@
 import UIKit
 import Foundation
 
+typealias Author    = [String]
+typealias Tag       = [String]
+
 class Book {
     
     //MARK: - Stored properties
-    let title   :   String
-    let author  :   String
-    let tags    :   String
-    let image   :   UIImage
-    let pdf     :   Data
+    let title       :   String
+    let authors     :   Author
+    let tags        :   String
+    let image_url   :   URL
+    let pdf_url     :   URL
     
     
     //MARK: - Computed Properties
     
     //MARK: - Inicialization
     init(title:String,
-         author: String,
+         authors: Author,
          tags: String,
-         image: UIImage,
-         pdf: Data){
+         image_url: URL,
+         pdf_url: URL){
         
         self.title = title
-        self.author = author
+        self.authors = authors
         self.tags = tags
-        self.image = image
-        self.pdf = pdf
+        self.image_url = image_url
+        self.pdf_url = pdf_url
     }
     //MARK: - Proxies
     
     func proxyForEquality() -> String {
-        return "\(title)\(author)\(tags)\(image.hash)\(pdf.hashValue)"
+        return "\(title)\(authors)\(tags)\(image_url)\(pdf_url)"
     }
     
     func proxyForComparison() -> String {
