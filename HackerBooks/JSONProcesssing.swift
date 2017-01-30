@@ -66,3 +66,17 @@ func decode(Book json: JSONDictionary?) throws -> Book {
     }
     return try decode(Book: json)
 }
+
+
+//MARK: - Loading JSON from local file
+
+func loadFromLocalFile(fileName name: String, bundle: Bundle = Bundle.main) throws -> JSONArray{
+    if let url = bundle.url(forResource: name),
+    let data = try? Data(contentsOf: url),
+    let maybeArray = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? JSONArray,
+        let array = maybeArray{
+        return array
+    }else {
+        throw BookErrors.JSONParsingError
+    }
+}
