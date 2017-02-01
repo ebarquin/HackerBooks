@@ -16,6 +16,7 @@
 		9C4432DE1E360A4300C40475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4432DC1E360A4300C40475 /* LaunchScreen.storyboard */; };
 		9C4432E71E360ADA00C40475 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4432E61E360ADA00C40475 /* Book.swift */; };
 		9C5096A11E3F6794000375D5 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5096A01E3F6794000375D5 /* FoundationExtensions.swift */; };
+		9C9837B11E40626000ADBEE7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9837B01E40626000ADBEE7 /* Library.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9C4432DF1E360A4300C40475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C4432E61E360ADA00C40475 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9C5096A01E3F6794000375D5 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		9C9837B01E40626000ADBEE7 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				9C4432E61E360ADA00C40475 /* Book.swift */,
 				9C2F0C851E3E6B66002AADEA /* JSONProcesssing.swift */,
 				9C2F0C871E3E6E25002AADEA /* Errors.swift */,
+				9C9837B01E40626000ADBEE7 /* Library.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C4432D61E360A4300C40475 /* ViewController.swift in Sources */,
+				9C9837B11E40626000ADBEE7 /* Library.swift in Sources */,
 				9C2F0C881E3E6E25002AADEA /* Errors.swift in Sources */,
 				9C5096A11E3F6794000375D5 /* FoundationExtensions.swift in Sources */,
 				9C4432D41E360A4300C40475 /* AppDelegate.swift in Sources */,

@@ -80,3 +80,25 @@ func loadFromLocalFile(fileName name: String, bundle: Bundle = Bundle.main) thro
         throw BookErrors.JSONParsingError
     }
 }
+
+//MARK: - Dowload and Save JSON
+
+func downloadAndSaveJSONFile() throws {
+    
+    //Descargamos los datos de Internet
+
+    let url = "https://t.co/K9ziV0z3SJ"
+    let json = try? Data(contentsOf: URL(string: url)!)
+    guard let downloadedData = json else {
+        throw BookErrors.filePointedByURLNotReachable
+    }
+    
+    // Guardamos los datos en un archivo
+    
+    let sourcePaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    let path = sourcePaths[0]
+    let file: URL = URL(fileURLWithPath: "books_readable.json", relativeTo: path)
+    let fileManager = FileManager.default
+    fileManager.createFile(atPath: file.path, contents: downloadedData, attributes: nil)
+}
+

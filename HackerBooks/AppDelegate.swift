@@ -15,7 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //Cmprobamos si la aplicación se ha lanzado antes
+        //let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        let launchedBefore = false
+        if launchedBefore {
+            print("Anteriormente Iniciada")
+            UserDefaults.standard.set(false, forKey: "launchedBefore")
+        } else {
+            print("se inicia por primera vez")
+            do{
+                try downloadAndSaveJSONFile()
+                
+            } catch {
+                fatalError("Error downloading JSON File")
+            }
+            
+            
+            UserDefaults.standard.set(false, forKey: "launchedBefore")
+            
+            
+        }
         return true
     }
 
