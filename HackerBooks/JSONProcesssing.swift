@@ -100,13 +100,16 @@ func getMyDocumentsURL() -> URL {
     return sourcePath[0]
 }
 
+//MARK: - Load JSON from Sandbox
 func loadFromSandbox()throws -> JSONArray {
     let documentsFolder = getMyDocumentsURL()
     let fileURL = documentsFolder.appendingPathComponent("books_readable.json")
-    let data = try? Data(contentsOf: fileURL)
-    let array = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? JSONArray{
+    if let data = try? Data(contentsOf: fileURL),
+        let maybeArray = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? JSONArray,
+        let array = maybeArray{
         return array
+    }else{
+        throw BookErrors.JSONParsingError
     }
-    
     
 }

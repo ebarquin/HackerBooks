@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore {
             print("Anteriormente Iniciada")
+            do{
+                try loadFromSandbox()
+                
+            }catch{
+                fatalError(" Error loading Data")
+            }
         
             
  
@@ -27,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("se inicia por primera vez")
             do{
                 try downloadAndSaveJSONFile()
+                try loadFromSandbox()
                 
             } catch {
                 fatalError("Error downloading JSON File")
