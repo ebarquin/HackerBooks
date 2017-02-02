@@ -17,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //Cmprobamos si la aplicación se ha lanzado antes
-        //let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        let launchedBefore = false
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore {
             print("Anteriormente Iniciada")
-            UserDefaults.standard.set(false, forKey: "launchedBefore")
+        
+            
+ 
         } else {
             print("se inicia por primera vez")
             do{
@@ -32,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             
-            UserDefaults.standard.set(false, forKey: "launchedBefore")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
             
             
         }

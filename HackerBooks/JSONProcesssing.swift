@@ -68,18 +68,6 @@ func decode(Book json: JSONDictionary?) throws -> Book {
 }
 
 
-//MARK: - Loading JSON from local file
-
-func loadFromLocalFile(fileName name: String, bundle: Bundle = Bundle.main) throws -> JSONArray{
-    if let url = bundle.url(forResource: name),
-    let data = try? Data(contentsOf: url),
-    let maybeArray = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? JSONArray,
-        let array = maybeArray{
-        return array
-    }else {
-        throw BookErrors.JSONParsingError
-    }
-}
 
 //MARK: - Dowload and Save JSON
 
@@ -99,6 +87,26 @@ func downloadAndSaveJSONFile() throws {
     let path = sourcePaths[0]
     let file: URL = URL(fileURLWithPath: "books_readable.json", relativeTo: path)
     let fileManager = FileManager.default
-    fileManager.createFile(atPath: file.path, contents: downloadedData, attributes: nil)
+    let created = fileManager.createFile(atPath: file.path, contents: downloadedData, attributes: nil)
+    
+    
+    print(created)
 }
 
+//MARK: - Get URL of Documents
+    
+func getMyDocumentsURL() -> URL {
+    let sourcePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return sourcePath[0]
+}
+
+func loadFromSandbox()throws -> JSONArray {
+    let documentsFolder = getMyDocumentsURL()
+    let fileURL = documentsFolder.appendingPathComponent("books_readable.json")
+    let data = try? Data(contentsOf: fileURL)
+    let array = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? JSONArray{
+        return array
+    }
+    
+    
+}

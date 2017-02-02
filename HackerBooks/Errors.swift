@@ -15,5 +15,4 @@ enum BookErrors: Error {
     case wrongJSONFormat
     case JSONParsingError
     case filePointedByURLNotReachable
-    
 }
