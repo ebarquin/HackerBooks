@@ -70,13 +70,10 @@ class LibraryTableViewController: UITableViewController {
         //Configurarla
         cell?.imageView?.image = #imageLiteral(resourceName: "cargando.jpg")
         cell?.textLabel?.text = book.title
-        cell?.detailTextLabel = book.authors
+        cell?.detailTextLabel?.text = book.authors.joined(separator: " ")
         
         //Devolverla
-        guard let cellNoNil = cell else {
-            
-        }
-        return cellNoNil
+        return cell!
         
     }
 
