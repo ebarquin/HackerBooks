@@ -20,6 +20,7 @@
 		9CD6B0F51E4524AE006AA9F2 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */; };
 		9CD6B0F91E45E341006AA9F2 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F71E45E341006AA9F2 /* LibraryTableViewController.swift */; };
 		9CD6B0FA1E45E341006AA9F2 /* LibraryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F81E45E341006AA9F2 /* LibraryTableViewController.xib */; };
+		9CD6B0FC1E46559A006AA9F2 /* cargando.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD6B0FB1E46559A006AA9F2 /* cargando.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
 		9CD6B0F71E45E341006AA9F2 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		9CD6B0F81E45E341006AA9F2 /* LibraryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryTableViewController.xib; sourceTree = "<group>"; };
+		9CD6B0FB1E46559A006AA9F2 /* cargando.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cargando.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		9C50969C1E3F5C1A000375D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9CD6B0FB1E46559A006AA9F2 /* cargando.jpg */,
 				9C50969D1E3F5C2F000375D5 /* JSON */,
 			);
 			name = Resources;
@@ -199,6 +202,7 @@
 				9C4432DE1E360A4300C40475 /* LaunchScreen.storyboard in Resources */,
 				9C4432DB1E360A4300C40475 /* Assets.xcassets in Resources */,
 				9C4432D91E360A4300C40475 /* Main.storyboard in Resources */,
+				9CD6B0FC1E46559A006AA9F2 /* cargando.jpg in Resources */,
 				9CD6B0FA1E45E341006AA9F2 /* LibraryTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
