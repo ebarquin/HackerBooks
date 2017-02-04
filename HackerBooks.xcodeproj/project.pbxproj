@@ -17,6 +17,9 @@
 		9C4432E71E360ADA00C40475 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4432E61E360ADA00C40475 /* Book.swift */; };
 		9C5096A11E3F6794000375D5 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5096A01E3F6794000375D5 /* FoundationExtensions.swift */; };
 		9C9837B11E40626000ADBEE7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9837B01E40626000ADBEE7 /* Library.swift */; };
+		9CD6B0F51E4524AE006AA9F2 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */; };
+		9CD6B0F91E45E341006AA9F2 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F71E45E341006AA9F2 /* LibraryTableViewController.swift */; };
+		9CD6B0FA1E45E341006AA9F2 /* LibraryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F81E45E341006AA9F2 /* LibraryTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		9C4432E61E360ADA00C40475 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9C5096A01E3F6794000375D5 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		9C9837B01E40626000ADBEE7 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
+		9CD6B0F71E45E341006AA9F2 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
+		9CD6B0F81E45E341006AA9F2 /* LibraryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 				9C2F0C851E3E6B66002AADEA /* JSONProcesssing.swift */,
 				9C2F0C871E3E6E25002AADEA /* Errors.swift */,
 				9C9837B01E40626000ADBEE7 /* Library.swift */,
+				9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -105,8 +112,9 @@
 		9C50969E1E3F5C70000375D5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				9C50969C1E3F5C1A000375D5 /* Resources */,
 				9C4432E51E360AB100C40475 /* Models */,
+				9CD6B0F61E45E2FA006AA9F2 /* Controllers */,
+				9C50969C1E3F5C1A000375D5 /* Resources */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -117,6 +125,15 @@
 				9C5096A01E3F6794000375D5 /* FoundationExtensions.swift */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CD6B0F61E45E2FA006AA9F2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CD6B0F71E45E341006AA9F2 /* LibraryTableViewController.swift */,
+				9CD6B0F81E45E341006AA9F2 /* LibraryTableViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +199,7 @@
 				9C4432DE1E360A4300C40475 /* LaunchScreen.storyboard in Resources */,
 				9C4432DB1E360A4300C40475 /* Assets.xcassets in Resources */,
 				9C4432D91E360A4300C40475 /* Main.storyboard in Resources */,
+				9CD6B0FA1E45E341006AA9F2 /* LibraryTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,10 +211,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C4432D61E360A4300C40475 /* ViewController.swift in Sources */,
+				9CD6B0F51E4524AE006AA9F2 /* MultiDictionary.swift in Sources */,
 				9C9837B11E40626000ADBEE7 /* Library.swift in Sources */,
 				9C2F0C881E3E6E25002AADEA /* Errors.swift in Sources */,
 				9C5096A11E3F6794000375D5 /* FoundationExtensions.swift in Sources */,
 				9C4432D41E360A4300C40475 /* AppDelegate.swift in Sources */,
+				9CD6B0F91E45E341006AA9F2 /* LibraryTableViewController.swift in Sources */,
 				9C2F0C861E3E6B66002AADEA /* JSONProcesssing.swift in Sources */,
 				9C4432E71E360ADA00C40475 /* Book.swift in Sources */,
 			);

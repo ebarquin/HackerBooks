@@ -12,4 +12,65 @@ import UIKit
 //Representa un conjunto de libros
 class Library {
     
+    //MARK: - Properties
+    var books = MultiDictionary<Tag, Book>()
+    
+    
+    
+    
+    //Devuelve el número total de libros
+    var booksCount: Int{
+        get{
+            let count: Int = self.books.count
+            return count
+        }
+    }
+    
+    //MARK: - Inizialization
+    init (books: [Book]){
+        for book in books {
+            for tag in tags {
+                self.books.insert(value: book, forKey: tag)
+                
+            }
+        }
+    }
+    
+    //MARK: - Accesors
+    
+    //Returns tags array
+    var tags: [Tag] {
+        get {
+            var tags: [Tag] = []
+            for tag in books.keys.sorted(){
+                tags.append(tag)
+            }
+            return tags
+        }
+    }
+
+    //Returns number of tags
+    var tagsCount : Int {
+        get{
+            return books.keys.count
+        }
+    }
+    
+    //Returns number of book for tag
+    func bookCount(forTagName name: Tag) -> Int {
+        guard let count = books[name]?.count else {
+            return 0
+        }
+        return count
+    }
+    
+    //Returns a book at index
+    func book(atIndex index: Int, forTag tag: Tag) -> Book{
+        guard let bookCollection = books[tag],
+            let book = bookCollection[index] else {
+        }
+        return book
+    }
+    
+    
 }

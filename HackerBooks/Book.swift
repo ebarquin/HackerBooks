@@ -10,14 +10,14 @@ import UIKit
 import Foundation
 
 typealias Author    = [String]
-typealias Tag       = [String]
+typealias Tag       = String
 
 class Book {
     
     //MARK: - Stored properties
     let title       :   String
     let authors     :   Author
-    let tags        :   Tag
+    let tags        :   [Tag]
     let image_url   :   URL
     let pdf_url     :   URL
     
@@ -27,7 +27,7 @@ class Book {
     //MARK: - Inicialization
     init(title:String,
          authors: Author,
-         tags: Tag,
+         tags: [Tag],
          image_url: URL,
          pdf_url: URL){
         
@@ -64,6 +64,20 @@ extension Book : Comparable {
     public static func <(lhs: Book, rhs: Book) -> Bool {
         return (lhs.proxyForComparison() < rhs.proxyForComparison())
     }
+}
+
+extension Book : Hashable {
+    /// The hash value.
+    ///
+    /// Hash values are not guaranteed to be equal across different executions of
+    /// your program. Do not save hash values to use during a future execution.
+    public var hashValue: Int {
+        get {
+            return proxyForEquality().hashValue
+        }
+    }
+
+    
 }
 
 
