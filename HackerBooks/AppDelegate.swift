@@ -15,28 +15,85 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
         
-        //Cmprobamos si la aplicación se ha lanzado antes
+    
+        //Check if the app has been launched before
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore {
             print("Anteriormente Iniciada")
             do{
-                try loadFromSandbox()
+                let json = try loadFromSandbox()
+                var books = [Book]()
+                for dict in json{
+                    do {
+                        let book = try decode(Book: dict)
+                        books.append(book)
+                    }catch{
+                        print("Error processing \(dict)")
+                    }
+                }
+                //Create Model
+                let model = Library(books: books)
+                
+                //Create LibraryVC
+                let libraryVC = LibraryTableViewController(model: model)
+                
+                //Create Nav
+                let libraryNav = UINavigationController(rootViewController: libraryVC)
+                
+                //Window
+                window?.rootViewController = libraryNav
+                
+                //Show Window
+                window?.makeKeyAndVisible()
+                
+                return true
                 
             }catch{
-                fatalError(" Error loading Data")
+                fatalError("Error while loading Model from JSON")
             }
-        
-            
+
  
         } else {
             print("se inicia por primera vez")
             do{
                 try downloadAndSaveJSONFile()
-                try loadFromSandbox()
+                
                 
             } catch {
                 fatalError("Error downloading JSON File")
+            }
+            do {
+                let json = try loadFromSandbox()
+                var books = [Book]()
+                for dict in json{
+                    do {
+                        let book = try decode(Book: dict)
+                        books.append(book)
+                    }catch{
+                        print("Error processing \(dict)")
+                    }
+                }
+                //Create Model
+                let model = Library(books: books)
+                
+                //Create LibraryVC
+                let libraryVC = LibraryTableViewController(model: model)
+                
+                //Create Nav
+                let libraryNav = UINavigationController(rootViewController: libraryVC)
+                
+                //Window
+                window?.rootViewController = libraryNav
+                
+                //Show Window
+                window?.makeKeyAndVisible()
+                
+                return true
+
+            }catch{
+                fatalError("Error while loading Model from JSON")
             }
             
             
