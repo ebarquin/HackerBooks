@@ -65,11 +65,12 @@ class Library {
     }
     
     //Returns a book at index
-    func book(atIndex index: Int, forTag tag: Tag) -> Book{
-        guard let bookCollection = books[tag],
-            let book = bookCollection[index] else {
+    func book(atIndex index: Int, forTag tag: Tag) -> Book?{
+        guard let bookCollection = books[tag] else {
+            return nil
         }
-        return book
+        return bookCollection.sorted()[index]
+
     }
     
     
