@@ -17,7 +17,7 @@ class Library {
     
     
     
-    
+    //MARK: - Computed Properties
     //Devuelve el número total de libros
     var booksCount: Int{
         get{
@@ -29,7 +29,7 @@ class Library {
     //MARK: - Inizialization
     init (books: [Book]){
         for book in books {
-            for tag in tags {
+            for tag in book.tags {
                 self.books.insert(value: book, forKey: tag)
                 
             }

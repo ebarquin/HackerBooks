@@ -68,7 +68,7 @@ class LibraryTableViewController: UITableViewController {
         }
         
         //Configurarla
-        cell?.imageView?.image = #imageLiteral(resourceName: "cargando.jpg")
+        cell?.imageView?.image = #imageLiteral(resourceName: "book.png")
         cell?.textLabel?.text = book?.title
         cell?.detailTextLabel?.text = book?.authors.joined(separator: " ")
         
