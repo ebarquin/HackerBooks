@@ -48,7 +48,7 @@ class LibraryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return getTag(forSection: section)
+        return getTag(forSection: section).uppercased()
         
     }
     
@@ -68,7 +68,9 @@ class LibraryTableViewController: UITableViewController {
         }
         
         //Configurarla
-        cell?.imageView?.image = #imageLiteral(resourceName: "book.png")
+        let url = book?.image_url
+        let data = try? Data(contentsOf: (url)!)
+        cell?.imageView?.image = UIImage(data: data!)
         cell?.textLabel?.text = book?.title
         cell?.detailTextLabel?.text = book?.authors.joined(separator: " ")
         
