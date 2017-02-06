@@ -35,7 +35,22 @@ class LibraryTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    //MARK: - Table View Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let tag = getTag(forSection: indexPath.section)
+        
+        //descubrir que libro
+        let book  = model.book(atIndex: indexPath.row, forTag: tag)
+        
+        //Crear u BookDetailVC
+        let bookDetailVC = BookDetailViewController(model: book!)
+        
+        //Pushearlo
+        navigationController?.pushViewController(bookDetailVC, animated: true)
+        
+    }
+    
    
     // MARK: - Table view data source
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PDFReaderViewController" customModule="HackerBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="PDFActivityIndicator" destination="1gd-2O-2sA" id="hBC-Gu-64m"/>
+                <outlet property="pdfReader" destination="kFO-Fu-FZ9" id="PM2-sJ-Iis"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFO-Fu-FZ9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-2O-2sA">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kFO-Fu-FZ9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1eY-KY-D2i"/>
+                <constraint firstAttribute="trailing" secondItem="kFO-Fu-FZ9" secondAttribute="trailing" id="6fP-EA-1dQ"/>
+                <constraint firstItem="1gd-2O-2sA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9IU-YX-ZX3"/>
+                <constraint firstAttribute="bottom" secondItem="kFO-Fu-FZ9" secondAttribute="bottom" id="jIP-GD-R96"/>
+                <constraint firstItem="kFO-Fu-FZ9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lHx-f7-igR"/>
+                <constraint firstItem="1gd-2O-2sA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="sxx-re-7p3"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

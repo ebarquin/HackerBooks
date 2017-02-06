@@ -19,6 +19,8 @@
 		9C57FD0F1E47A85F0037A331 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C57FD0E1E47A85F0037A331 /* book.png */; };
 		9C57FD121E47AE7B0037A331 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C57FD101E47AE7B0037A331 /* BookDetailViewController.swift */; };
 		9C57FD131E47AE7B0037A331 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C57FD111E47AE7B0037A331 /* BookDetailViewController.xib */; };
+		9C57FD161E48FE090037A331 /* PDFReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C57FD141E48FE090037A331 /* PDFReaderViewController.swift */; };
+		9C57FD171E48FE090037A331 /* PDFReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C57FD151E48FE090037A331 /* PDFReaderViewController.xib */; };
 		9C9837B11E40626000ADBEE7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9837B01E40626000ADBEE7 /* Library.swift */; };
 		9CD6B0F51E4524AE006AA9F2 /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */; };
 		9CD6B0F91E45E341006AA9F2 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6B0F71E45E341006AA9F2 /* LibraryTableViewController.swift */; };
@@ -40,6 +42,8 @@
 		9C57FD0E1E47A85F0037A331 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		9C57FD101E47AE7B0037A331 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		9C57FD111E47AE7B0037A331 /* BookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		9C57FD141E48FE090037A331 /* PDFReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFReaderViewController.swift; sourceTree = "<group>"; };
+		9C57FD151E48FE090037A331 /* PDFReaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFReaderViewController.xib; sourceTree = "<group>"; };
 		9C9837B01E40626000ADBEE7 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
 		9CD6B0F71E45E341006AA9F2 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				9CD6B0F81E45E341006AA9F2 /* LibraryTableViewController.xib */,
 				9C57FD101E47AE7B0037A331 /* BookDetailViewController.swift */,
 				9C57FD111E47AE7B0037A331 /* BookDetailViewController.xib */,
+				9C57FD141E48FE090037A331 /* PDFReaderViewController.swift */,
+				9C57FD151E48FE090037A331 /* PDFReaderViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 				9C4432DE1E360A4300C40475 /* LaunchScreen.storyboard in Resources */,
 				9C57FD0F1E47A85F0037A331 /* book.png in Resources */,
 				9C57FD131E47AE7B0037A331 /* BookDetailViewController.xib in Resources */,
+				9C57FD171E48FE090037A331 /* PDFReaderViewController.xib in Resources */,
 				9C4432DB1E360A4300C40475 /* Assets.xcassets in Resources */,
 				9C4432D91E360A4300C40475 /* Main.storyboard in Resources */,
 				9CD6B0FA1E45E341006AA9F2 /* LibraryTableViewController.xib in Resources */,
@@ -220,6 +227,7 @@
 				9C57FD121E47AE7B0037A331 /* BookDetailViewController.swift in Sources */,
 				9C5096A11E3F6794000375D5 /* FoundationExtensions.swift in Sources */,
 				9C4432D41E360A4300C40475 /* AppDelegate.swift in Sources */,
+				9C57FD161E48FE090037A331 /* PDFReaderViewController.swift in Sources */,
 				9CD6B0F91E45E341006AA9F2 /* LibraryTableViewController.swift in Sources */,
 				9C2F0C861E3E6B66002AADEA /* JSONProcesssing.swift in Sources */,
 				9C4432E71E360ADA00C40475 /* Book.swift in Sources */,
