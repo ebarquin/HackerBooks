@@ -13,6 +13,8 @@ class LibraryTableViewController: UITableViewController {
     //MARK: - Properties
     let model : Library
     
+    weak var delegate : LibraryTableViewControllerDelegate? = nil
+    
     //MARK: - Initialization
     init(model: Library){
         self.model = model
@@ -43,12 +45,8 @@ class LibraryTableViewController: UITableViewController {
         //descubrir que libro
         let book  = model.book(atIndex: indexPath.row, forTag: tag)
         
-        //Crear u BookDetailVC
-        let bookDetailVC = BookDetailViewController(model: book!)
-        
-        //Pushearlo
-        navigationController?.pushViewController(bookDetailVC, animated: true)
-        
+       //Avisar al delegado
+        delegate?.LibraryTableViewController(self, didSelectBook: book!)
     }
     
    
@@ -99,4 +97,10 @@ class LibraryTableViewController: UITableViewController {
         return model.tags[section]
         
     }
+}
+
+//MARK: - LibraryTableViewControllerDelegate
+protocol LibraryTableViewControllerDelegate: class {
+    
+    func LibraryTableViewController(_ LibraryVC: LibraryTableViewController, didSelectBook book: Book)
 }

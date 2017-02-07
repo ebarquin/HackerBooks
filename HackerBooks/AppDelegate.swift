@@ -46,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let bookVC = BookDetailViewController(model: model.book(atIndex: 0, forTag: model.tags[0])!)
                 let bookNav = UINavigationController(rootViewController: bookVC)
                 
+                //Assign Delegates
+                libraryVC.delegate = bookVC
+                
                 //SplitVC
                 let splitVC = UISplitViewController()
                 splitVC.viewControllers = [libraryNav, bookNav]

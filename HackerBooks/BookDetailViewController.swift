@@ -12,7 +12,7 @@ class BookDetailViewController: UIViewController {
     
     //MARK: - Properties
     
-    let model : Book
+    var model : Book
     
     //MARK: - Initialization
     init(model: Book){
@@ -53,5 +53,16 @@ class BookDetailViewController: UIViewController {
         
     }
 
+    
+}
+
+//MARK: - Protocols
+extension BookDetailViewController: LibraryTableViewControllerDelegate {
+    func LibraryTableViewController(_ LibraryVC: LibraryTableViewController, didSelectBook book: Book) {
+        
+        //Cambiamos el modelo
+        model = book
+        syncViewModel()
+    }
     
 }
