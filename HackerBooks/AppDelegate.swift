@@ -42,8 +42,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //Create Nav
                 let libraryNav = UINavigationController(rootViewController: libraryVC)
                 
+                //Create bookVC
+                let bookVC = BookDetailViewController(model: model.book(atIndex: 0, forTag: model.tags[0])!)
+                let bookNav = UINavigationController(rootViewController: bookVC)
+                
+                //SplitVC
+                let splitVC = UISplitViewController()
+                splitVC.viewControllers = [libraryNav, bookNav]
+                
                 //Window
-                window?.rootViewController = libraryNav
+                window?.rootViewController = splitVC
                 
                 //Show Window
                 window?.makeKeyAndVisible()

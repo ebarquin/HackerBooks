@@ -28,11 +28,27 @@
                                     <constraint firstAttribute="width" constant="318" id="frm-hE-tuy"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-g5-UE9">
+                                <rect key="frame" x="159" y="583" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eugenio Barquín" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeM-1I-CrB">
+                                <rect key="frame" x="125" y="547" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="AJ2-g5-UE9" secondAttribute="bottom" constant="63" id="ALD-TS-ivh"/>
                             <constraint firstItem="bdz-vk-4u6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="L9Y-6o-Fou"/>
+                            <constraint firstItem="AJ2-g5-UE9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZQK-BO-ZUu"/>
                             <constraint firstItem="bdz-vk-4u6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gsi-KI-IR4"/>
+                            <constraint firstItem="jeM-1I-CrB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nIB-J5-4qP"/>
+                            <constraint firstItem="AJ2-g5-UE9" firstAttribute="top" secondItem="jeM-1I-CrB" secondAttribute="bottom" constant="15" id="wRH-rQ-GlY"/>
                         </constraints>
                     </view>
                 </viewController>
