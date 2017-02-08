@@ -48,6 +48,15 @@ class Library {
             return tags
         }
     }
+    
+    func getTagsArray() -> [Tag]{
+        var tags: [Tag] = []
+        for tag in books.keys.sorted(){
+            tags.append(tag)
+        }
+        return tags
+        
+    }
 
     //Returns number of tags
     var tagsCount : Int {

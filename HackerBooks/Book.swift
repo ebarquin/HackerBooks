@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 typealias Author    = [String]
-
+typealias Tag       = String
 class Book {
     
     //MARK: - Stored properties
@@ -19,7 +19,7 @@ class Book {
     let tags        :   [Tag]
     let image_url   :   URL
     let pdf_url     :   URL
-    var isFavorite  :   Bool
+    var isFavorite  :   Bool?
     
     
     //MARK: - Computed Properties
@@ -30,14 +30,17 @@ class Book {
          tags: [Tag],
          image_url: URL,
          pdf_url: URL,
-        isFavorite:Bool){
+        isFavorite:Bool?){
         
         self.title = title
         self.authors = authors
         self.tags = tags
         self.image_url = image_url
         self.pdf_url = pdf_url
-        self.isFavorite = isFavorite
+        if isFavorite != nil{
+            self.isFavorite = isFavorite
+        }
+        
         
     }
     //MARK: - Proxies
@@ -82,8 +85,6 @@ extension Book : Hashable {
 
     
 }
-
-
 
 
 
