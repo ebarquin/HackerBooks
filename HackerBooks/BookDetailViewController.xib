@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailViewController" customModule="HackerBooks" customModuleProvider="target">
             <connections>
+                <outlet property="isFavoriteButton" destination="K3X-Ks-HLz" id="ySV-Lz-0ti"/>
                 <outlet property="photoView" destination="e2H-Jc-sza" id="Hs5-PQ-3vy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

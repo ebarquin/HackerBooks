@@ -43,8 +43,19 @@ class BookDetailViewController: UIViewController {
     //MARK: - Actions
     
     @IBOutlet var photoView: UIImageView!
+    @IBOutlet var isFavoriteButton: UIBarButtonItem!
     
     @IBAction func setFavorite(_ sender: UIBarButtonItem) {
+        if model.isFavorite == false {
+            model.isFavorite = true
+            isFavoriteButton.title = "Favorite"
+            syncViewModel()
+        }else {
+            model.isFavorite = false
+            isFavoriteButton.title = "No Favorite"
+            syncViewModel()
+            
+        }
     }
     
     @IBAction func displayPDF(_ sender: UIBarButtonItem) {

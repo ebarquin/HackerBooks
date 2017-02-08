@@ -10,7 +10,6 @@ import UIKit
 import Foundation
 
 typealias Author    = [String]
-typealias Tag       = String
 
 class Book {
     
@@ -20,6 +19,7 @@ class Book {
     let tags        :   [Tag]
     let image_url   :   URL
     let pdf_url     :   URL
+    var isFavorite  :   Bool
     
     
     //MARK: - Computed Properties
@@ -29,13 +29,16 @@ class Book {
          authors: Author,
          tags: [Tag],
          image_url: URL,
-         pdf_url: URL){
+         pdf_url: URL,
+        isFavorite:Bool){
         
         self.title = title
         self.authors = authors
         self.tags = tags
         self.image_url = image_url
         self.pdf_url = pdf_url
+        self.isFavorite = isFavorite
+        
     }
     //MARK: - Proxies
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C14F0E31E4B8E6300D9962F /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C14F0E21E4B8E6300D9962F /* Tag.swift */; };
 		9C2F0C861E3E6B66002AADEA /* JSONProcesssing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F0C851E3E6B66002AADEA /* JSONProcesssing.swift */; };
 		9C2F0C881E3E6E25002AADEA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F0C871E3E6E25002AADEA /* Errors.swift */; };
 		9C4432D41E360A4300C40475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4432D31E360A4300C40475 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C14F0E21E4B8E6300D9962F /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		9C2F0C851E3E6B66002AADEA /* JSONProcesssing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcesssing.swift; sourceTree = "<group>"; };
 		9C2F0C871E3E6E25002AADEA /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		9C4432D01E360A4300C40475 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				9C2F0C871E3E6E25002AADEA /* Errors.swift */,
 				9C9837B01E40626000ADBEE7 /* Library.swift */,
 				9CD6B0F41E4524AE006AA9F2 /* MultiDictionary.swift */,
+				9C14F0E21E4B8E6300D9962F /* Tag.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C14F0E31E4B8E6300D9962F /* Tag.swift in Sources */,
 				9C4432D61E360A4300C40475 /* ViewController.swift in Sources */,
 				9CD6B0F51E4524AE006AA9F2 /* MultiDictionary.swift in Sources */,
 				9C9837B11E40626000ADBEE7 /* Library.swift in Sources */,

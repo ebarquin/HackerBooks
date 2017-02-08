@@ -53,9 +53,11 @@ func decode(Book json: JSONDictionary) throws -> Book {
     }
     
     let authors = authorsString.components(separatedBy: ", ")
-    let tags = tagsString.components(separatedBy: ", ")
+    let tags = tagsString.components(separatedBy: ", ") 
     
-    return Book(title: title, authors: authors, tags: tags, image_url: image_url, pdf_url: pdf_url)
+    let isFavorite = false
+    
+    return Book(title: title, authors: authors, tags: tags, image_url: image_url, pdf_url: pdf_url, isFavorite: isFavorite)
 
     
 }
